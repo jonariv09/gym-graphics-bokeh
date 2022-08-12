@@ -11,7 +11,7 @@ app.config.from_object(main.settings[os.environ.get('APPLICATION_ENV', 'default'
 # Logs Initialization
 console = logging.getLogger('console')
 
-app.add_url_rule('/graphics', view_func=GraphicsAPI(f"graphic"))
+app.add_url_rule('/graphics', view_func=GraphicsAPI.as_view("graphics"))
 
 # Flask API Initialization
 if __name__ == "__main__":

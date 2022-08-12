@@ -1,6 +1,9 @@
 from flask.views import MethodView
-from app.models.graphic_options import GraphicOptions
+from flask import request
 
 class GraphicsAPI(MethodView):
-    def get(GraphicOptions):
+    def get(self):
         return "Hola"
+
+    def post(selt):
+        return request.json
